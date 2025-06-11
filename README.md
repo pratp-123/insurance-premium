@@ -11,7 +11,7 @@ It features a backend powered by **FastAPI**, a frontend built with **Streamlit*
 ---
 
 ### You can pull Docker image from 
-👉 [Run this Command in docker desktop]docker pull prateekx/insurance-premium
+👉 docker pull prateekx/insurance-premium
 
 
 ## 📌 Project Overview
