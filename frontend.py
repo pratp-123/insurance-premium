@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 API_URL = "https://insurance-premium-ht6v.onrender.com"
 
-response = requests.get(f"{API_URL}/recommend?user_id=123")
 
 
 st.title("Insurance Premium Category Predictor")
@@ -32,7 +31,7 @@ if st.button("Predict Premium Category"):
     }
 
     try:
-        response = requests.post(API_URL, json=input_data)
+        response = requests.post(f"{API_URL}/predict", json=input_data)  # ✅ fixed URL
         result = response.json()
 
         if response.status_code == 200 and "response" in result:
