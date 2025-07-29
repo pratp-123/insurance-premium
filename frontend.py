@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
-API_URL = "https://insurance-premium-ht6v.onrender.com"
+
+API_URL = st.secrets["API_URL"]
 
 
 
