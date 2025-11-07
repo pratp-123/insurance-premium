@@ -7,11 +7,17 @@ It features a backend powered by **FastAPI**, a frontend built with **Streamlit*
 ### 🌐 Live Demo
 
 👉 [Click to Try the App](https://insurance-premium-vt5ywi9jizbgreedxca4g5.streamlit.app/)
-
+👉 [Click to Try the Api](https://insurance-premium-ht6v.onrender.com/)
+```
+/predict # Hit this https://insurance-premium-ht6v.onrender.com/predict for prediction
+```
 ---
 
 ### You can pull Docker image from 
-👉 docker pull prateekx/insurance-premium
+👉 docker pull 
+```
+docker pull prateekx/insurance-premium
+```
 
 
 ## 📌 Project Overview
@@ -34,9 +40,69 @@ The application allows users to input personal and health details, which are pro
 ---
 
 
+
+## 📦 Clone and Run Locally
+
+```bash
+git clone https://github.com/pratp-123/insurance-premium-prediction.git
+
+# Navigate into the project folder
+cd insurance-premium-prediction
+## Directory Structure
+```
+## Creating environment
+```
+# create env on window
+python -m venv venv
+
+#activate env
+venv\Scripts\activate
+```
+```
+# create env on mac
+python3 -m venv venv
+#activate env
+source venv/bin/activate
+```
+
+## Install Dependencies
+```
+pip install -r requirements.txt
+```
+
+## Run code
+⚙️ Run the FastAPI Backend
+
+Navigate to the project root (where main.py is located).
+Run the API with Uvicorn:
+```bash
+uvicorn main:app --reload
+```
+
+Open your browser and check:
+API Root: http://127.0.0.1:8000
+Docs (Swagger UI): http://127.0.0.1:8000/docs
+
+## Directory Structure
+```
+Directory structure:
+└── pratp-123-insurance-premium/
+    ├── README.md
+    ├── app.py
+    ├── Dockerfile
+    ├── frontend.py
+    ├── requirements.txt
+    ├── config/
+    │   └── city_tier.py
+    ├── model/
+    │   └── predict.py
+    └── schema/
+        ├── prediction_response.py
+        └── user_input.py
+```
 ## 🛠️ Technologies Used
 
 - **Frontend**: Streamlit  
 - **Backend**: FastAPI  
 - **Machine Learning**: Scikit-learn  
-- **Containerization**: Docker  
+- **Containerization**: Docker
